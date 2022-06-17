@@ -1,0 +1,15 @@
+﻿  SaperRandom_LVL-God.cpp
+H:\Disk\qwerty\C++\My projects\SaperRandom_LVL-God\SaperRandom_LVL-God\SaperRandom_LVL-God.cpp(37,17): warning C4309: 'initializing': truncation of constant value
+H:\Disk\qwerty\C++\My projects\SaperRandom_LVL-God\SaperRandom_LVL-God\SaperRandom_LVL-God.cpp(94,32): warning C4553: '==': result of expression not used; did you intend '='?
+H:\Disk\qwerty\C++\My projects\SaperRandom_LVL-God\SaperRandom_LVL-God\SaperRandom_LVL-God.cpp(101,23): warning C4018: '<': signed/unsigned mismatch
+H:\Disk\qwerty\C++\My projects\SaperRandom_LVL-God\SaperRandom_LVL-God\SaperRandom_LVL-God.cpp(119,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+H:\Disk\qwerty\C++\My projects\SaperRandom_LVL-God\SaperRandom_LVL-God\SaperRandom_LVL-God.cpp(172,27): warning C4018: '<': signed/unsigned mismatch
+H:\Disk\qwerty\C++\My projects\SaperRandom_LVL-God\SaperRandom_LVL-God\SaperRandom_LVL-God.cpp(232,28): warning C4018: '>=': signed/unsigned mismatch
+H:\Disk\qwerty\C++\My projects\SaperRandom_LVL-God\SaperRandom_LVL-God\SaperRandom_LVL-God.cpp(232,72): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
+H:\Disk\qwerty\C++\My projects\SaperRandom_LVL-God\SaperRandom_LVL-God\SaperRandom_LVL-God.cpp(259,31): warning C4018: '<': signed/unsigned mismatch
+H:\Disk\qwerty\C++\My projects\SaperRandom_LVL-God\SaperRandom_LVL-God\SaperRandom_LVL-God.cpp(286,31): warning C4018: '>': signed/unsigned mismatch
+H:\Disk\qwerty\C++\My projects\SaperRandom_LVL-God\SaperRandom_LVL-God\SaperRandom_LVL-God.cpp(286,85): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
+H:\Disk\qwerty\C++\My projects\SaperRandom_LVL-God\SaperRandom_LVL-God\SaperRandom_LVL-God.cpp(368,48): warning C4553: '==': result of expression not used; did you intend '='?
+H:\Disk\qwerty\C++\My projects\SaperRandom_LVL-God\SaperRandom_LVL-God\SaperRandom_LVL-God.cpp(392,31): warning C4018: '>=': signed/unsigned mismatch
+H:\Disk\qwerty\C++\My projects\SaperRandom_LVL-God\SaperRandom_LVL-God\SaperRandom_LVL-God.cpp(392,74): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
+  SaperRandom_LVL-God.vcxproj -> H:\Disk\qwerty\C++\My projects\SaperRandom_LVL-God\Debug\SaperRandom_LVL-God.exe
