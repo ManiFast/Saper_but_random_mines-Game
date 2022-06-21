@@ -14,3 +14,4 @@ Saper with random mines and without any help (clue) unlike it was in classical g
 
 ### Genius of thought (misle lol)
 ![](https://github.com/ManiFast/Saper_but_random_mines-Game/blob/main/Photoes/Screenshot%202022-06-18%20004711.png)
+ 
