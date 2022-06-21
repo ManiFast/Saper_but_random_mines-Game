@@ -1,0 +1,8 @@
+﻿  SaperRandom_LVL-God.cpp
+H:\Disk\qwerty\C++\My projects\SaperRandom_LVL-God\SaperRandom_LVL-God\SaperRandom_LVL-God.cpp(18,17): warning C4309: 'initializing': truncation of constant value
+H:\Disk\qwerty\C++\My projects\SaperRandom_LVL-God\SaperRandom_LVL-God\SaperRandom_LVL-God.cpp(292,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+H:\Disk\qwerty\C++\My projects\SaperRandom_LVL-God\SaperRandom_LVL-God\SaperRandom_LVL-God.cpp(422,74): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
+H:\Disk\qwerty\C++\My projects\SaperRandom_LVL-God\SaperRandom_LVL-God\SaperRandom_LVL-God.cpp(485,85): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
+H:\Disk\qwerty\C++\My projects\SaperRandom_LVL-God\SaperRandom_LVL-God\SaperRandom_LVL-God.cpp(611,78): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
+H:\Disk\qwerty\C++\My projects\SaperRandom_LVL-God\SaperRandom_LVL-God\SaperRandom_LVL-God.cpp(92): warning C4715: 'checkCordinates': not all control paths return a value
+  SaperRandom_LVL-God.vcxproj -> H:\Disk\qwerty\C++\My projects\SaperRandom_LVL-God\x64\Debug\SaperRandom_LVL-God.exe

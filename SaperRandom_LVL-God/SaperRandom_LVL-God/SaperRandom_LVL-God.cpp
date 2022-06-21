@@ -11,25 +11,6 @@ using namespace std;
 
 HANDLE hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
 
-void printVector(vector<int> map)
-{
-    cout << endl;
-
-    int count = 0;
-    for (int i = 0; i < 5; ++i)
-    {
-        for (int k = 0; k < 5; ++k)
-        {
-            cout << map[count] << " ";
-            count++;
-        }
-
-        cout << endl;
-    }
-
-    cout << endl << endl;
-}
-
 void printBeautyVector(vector<int> mapUser, short activeItem)
 {
     cout << endl;
@@ -49,7 +30,7 @@ void printBeautyVector(vector<int> mapUser, short activeItem)
 
             if (mapUser[count] == 0) cout << high << " ";
             else if (mapUser[count] == 1) cout << "_" << " ";
-            else if (mapUser[count] == 2) cout << mine << " ";
+            else if (mapUser[count] == 2) cout << "X" << " ";
 
             count++;
         }
@@ -60,14 +41,22 @@ void printBeautyVector(vector<int> mapUser, short activeItem)
     cout << endl << endl;
 }
 
-// No using
-void showMenu()
+void printVector(vector<int> map)
 {
-    system("cls");
-    cout << "Play" << endl;
-    cout << "Show leader board" << endl;
-    cout << "Save and Exit" << endl;
+    cout << endl;
+    int count = 0;
+    for (int i = 0; i < 5; ++i)
+    {
+        for (int k = 0; k < 5; ++k)
+        {
+            cout << map[count] << " ";
+            count++;
+        }
+
+        cout << endl;
+    }
 }
+
 
 void gotoxy(short x, short y)
 {
@@ -82,36 +71,220 @@ void ConsoleCursorVisible(bool show)
     SetConsoleCursorInfo(hStdOut, &structCursorInfo);
 }
 
+// Not using coz I dnt know how return vector
 int checkCordinates(const vector<int> map, vector<int> mapUser, const short chosenElement)
 {
     // Checking 
-    if (map[chosenElement] == 0) 
-    {
-        mapUser[chosenElement] = 2;     // clear
-    }
+    if (map[chosenElement] == 0)
+        mapUser[chosenElement] = 1;     // clear
     else if (map[chosenElement] == 1)
-    {
-        mapUser[chosenElement] == 3;    // mine
-    }
+        mapUser[chosenElement] = 2;    // mine
 
-    mapUser[1] = 2;
-    return mapUser[1];
+    // Test
+    //mapUser[1] = 2;
+    //return mapUser[1];
 
     // Return vector
     for (int i = 0; i < size(mapUser); i++)
-    {
         return mapUser[i];
-    }
 
     //return 0;
 }
 
-void printCheckedMap(const vector<int> mapUser)
+void Stas(int r = 4, int lb = 9, int d = 7)
 {
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleTextAttribute(hConsole, d);
 
+    cout << "*==============*\n";
+
+    cout << "***************\r";
+    Sleep(100);
+    cout << "$(9%424 $^ &*@^\r";
+    Sleep(100);
+    cout << "(32#!^^ 4H fe52\r";
+    Sleep(100);
+    cout << ">>/fgsR#3Q4g4GE\r";
+    Sleep(100);
+    cout << "$#@^@Sa he $#Hs\r";
+    Sleep(100);
+    cout << ">>/fgsR#Eerwgv2\r";
+    Sleep(100);
+    cout << "@#@(*24 rw GjE3\r";
+    Sleep(100);
+    cout << "Рары?№3 #f Jfd@\r";
+    Sleep(100);
+    cout << ">>/fgsR#E$#q@g#\r";
+    Sleep(100);
+    cout << "|+3015_ +_ >gR%\r";
+    Sleep(100);
+    cout << ">>/fgsR#E$#q@g#\r";
+    Sleep(100);
+    cout << ">>/fgsR#Eerwgv2\r";
+    Sleep(100);
+    cout << "C#@(*24 rw GjE3\r";
+    cout << "C$#5643 $g 43#$\r";
+    Sleep(100);
+    cout << "Cr#$433 3# gE$#\r";
+    cout << "Cr/fgsR#E$#q@g#\r";
+    Sleep(100);
+    cout << "Cre&#2! Hd {/P]\r";
+    cout << "Cre$#8h $G tH23\r";
+    Sleep(100);
+    cout << "Crea bdf@$#//zd\r";
+    cout << "Crea $#@785 4{#\r";
+    Sleep(100);
+    cout << "Creatdf *( >m,v\r";
+    cout << "Creat#$ $h bju7\r";
+    Sleep(100);
+    cout << "CreateR#Eerwgv2\r";
+    cout << "Create- (= *&#$\r";
+    Sleep(100);
+    cout << "Created rw GjE3\r";
+    cout << "Created H4 hj;L\r";
+    Sleep(100);
+    cout << "Created bf Jfd@\r";
+    cout << "Created b. 4E[|\r";
+    Sleep(100);
+    cout << "Created by#q@g#\r";
+    cout << "Created by e367\r";
+    Sleep(100);
+    cout << "Created by SOP]\r";
+    cout << "Created by Sh)$\r";
+    Sleep(100);
+    cout << "Created by Stz0\r";
+    cout << "Created by St^4\r";
+    Sleep(100);
+    cout << "Created by Stav\r";
+    cout << "Created by Sta?\r";
+
+    Sleep(130);
+
+    SetConsoleTextAttribute(hConsole, r);
+    cout << "C";
+    SetConsoleTextAttribute(hConsole, d);
+    cout << "reated by Stas\r";
+    Sleep(50);
+
+    SetConsoleTextAttribute(hConsole, d);
+    cout << "C";
+    SetConsoleTextAttribute(hConsole, r);
+    cout << "r";
+    SetConsoleTextAttribute(hConsole, d);
+    cout << "eated by Stas\r";
+    Sleep(50);
+    SetConsoleTextAttribute(hConsole, d);
+    cout << "Cr";
+    SetConsoleTextAttribute(hConsole, r);
+    cout << "e";
+    SetConsoleTextAttribute(hConsole, d);
+    cout << "ated by Stas\r";
+    Sleep(50);
+    SetConsoleTextAttribute(hConsole, d);
+    cout << "Cre";
+    SetConsoleTextAttribute(hConsole, r);
+    cout << "a";
+    SetConsoleTextAttribute(hConsole, d);
+    cout << "ted by Stas\r";
+    Sleep(50);
+    SetConsoleTextAttribute(hConsole, d);
+    cout << "Crea";
+    SetConsoleTextAttribute(hConsole, r);
+    cout << "t";
+    SetConsoleTextAttribute(hConsole, d);
+    cout << "ed by Stas\r";
+    Sleep(50);
+    SetConsoleTextAttribute(hConsole, d);
+    cout << "Creat";
+    SetConsoleTextAttribute(hConsole, r);
+    cout << "e";
+    SetConsoleTextAttribute(hConsole, d);
+    cout << "d by Stas\r";
+    Sleep(50);
+    SetConsoleTextAttribute(hConsole, d);
+    cout << "Create";
+    SetConsoleTextAttribute(hConsole, r);
+    cout << "d";
+    SetConsoleTextAttribute(hConsole, d);
+    cout << " by Stas\r";
+    Sleep(50);
+    SetConsoleTextAttribute(hConsole, d);
+    cout << "Created";
+    SetConsoleTextAttribute(hConsole, r);
+    cout << " b";
+    SetConsoleTextAttribute(hConsole, d);
+    cout << "y Stas\r";
+    Sleep(50);
+    SetConsoleTextAttribute(hConsole, d);
+    cout << "Created b";
+    SetConsoleTextAttribute(hConsole, r);
+    cout << "y";
+    SetConsoleTextAttribute(hConsole, d);
+    cout << " Stas\r";
+    Sleep(50);
+    SetConsoleTextAttribute(hConsole, d);
+    cout << "Created by";
+    SetConsoleTextAttribute(hConsole, r);
+    cout << " ";
+    SetConsoleTextAttribute(hConsole, d);
+    cout << "Stas\r";
+    Sleep(50);
+    SetConsoleTextAttribute(hConsole, d);
+    cout << "Created by ";
+    SetConsoleTextAttribute(hConsole, r);
+    cout << "S";
+    SetConsoleTextAttribute(hConsole, d);
+    cout << "tas\r";
+    Sleep(50);
+    SetConsoleTextAttribute(hConsole, d);
+    cout << "Created by S";
+    SetConsoleTextAttribute(hConsole, r);
+    cout << "t";
+    SetConsoleTextAttribute(hConsole, d);
+    cout << "as\r";
+    Sleep(50);
+    SetConsoleTextAttribute(hConsole, d);
+    cout << "Created by St";
+    SetConsoleTextAttribute(hConsole, r);
+    cout << "a";
+    SetConsoleTextAttribute(hConsole, d);
+    cout << "s\r";
+    Sleep(50);
+    SetConsoleTextAttribute(hConsole, d);
+    cout << "Created by Sta";
+    SetConsoleTextAttribute(hConsole, r);
+    cout << "s";
+    SetConsoleTextAttribute(hConsole, d);
+    cout << "\r";
+    Sleep(50);
+
+
+
+    cout << "Created by ";
+    SetConsoleTextAttribute(hConsole, lb);
+    cout << "Stas";
+    SetConsoleTextAttribute(hConsole, d);
+    cout << "\n*==============*\n\n";
+
+    Beep(200, 100);
+    Beep(300, 100);
 }
 
+// Const values
+const char UP = 72;
+const char DOWN = 80;
+const char LEFT = 75;
+const char RIGHT = 77;
+const char ENTER = 13;
+const char ESC = 27;
+
+
+
+
 //!======== MAIN ===========
+
+
+
 
 int main()
 {
@@ -123,19 +296,18 @@ int main()
     string path = "config.dll";
     fsFile.open("config.dll");  // without ::app
 
+    // Save record from file
     //fsFile << msg;  // write
     int record;
     fsFile >> record;  // read
     int recordNew = 0;
 
-
-    
+    // Maps
     vector<int> map = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };    // 25
     vector<int> mapUser = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
-    string menu[] = { "1. Play", "2. Show leader board", "3. Save and Exit" };
-
-    //cout << "1. Play\n2. Show leader board\n\n3. Save Exit" << endl;
+    // cmd menu 1
+    string menu[] = { "1. Play", "2. Show record", "3. Release", "4. Save and Exit" };      // Carefuly with to much endl's
 
     // Starting arguments
     SetConsoleTitle(L"Saper v3.1");      // add lvl's after
@@ -144,20 +316,12 @@ int main()
     short activeMenuItem = 0;   // which active
     int ch = 0;               // changing button
 
-    // Const values
-    const char UP = 72;
-    const char DOWN = 80;
-    const char LEFT = 75;
-    const char RIGHT = 77;
-    const char ENTER = 13;
-    const char ESC = 27;
-
-    // Centere
-    int x = 35, y = 8;
-    gotoxy(x, y);
+    // Centere cordinates
+    int x = 35, y = 7;       // Carefuly with to much endl's and y
 
     bool startGame = false;
 
+    //// Main logic
     //# Do 
     bool beingDo = true;
     while (beingDo)
@@ -166,7 +330,7 @@ int main()
         cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \t\t\t\t\t\t\t\t\t\t\t(" << activeMenuItem << ")";
 
         // Centering
-        x = 35, y = 8;
+        x = 35, y = 7;
         gotoxy(x, y);  // move cursor
 
         for (int i = 0; i < size(menu); i++)
@@ -179,6 +343,7 @@ int main()
             cout << menu[i] << "     " << endl;
         }
 
+        // Author
         SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 3);
         cout << "\n\n\n\n\n\n\n\n\n \t\t\t\t\t\t\t\t\tCreated by ManiFast" << endl;
 
@@ -194,43 +359,72 @@ int main()
         case ENTER:
             system("cls");
 
-            if (activeMenuItem == 0)
+            if (activeMenuItem == 0)    // Game
             {
-                //game();
-                // Start
                 startGame = true;
                 beingDo = false;
             }
-            else if (activeMenuItem == 1)
+            else if (activeMenuItem == 1)   // Record
             {
-                beingDo = false;
+                // beingDo = false;     // we should not exit
+
+                // Condition
                 system("cls");
                 SetConsoleTextAttribute(hStdOut, 7);
-                
+
+                // Show record
                 fstream fsFile;
-                fsFile.open("config.dll");  // without ::app
+                fsFile.open("config.dll");
 
                 string recordShow;
                 fsFile >> recordShow;
-                cout << "Record is " << recordShow << endl;
+                cout << "Record is " << recordShow << " points." << endl << "\n\n\n(Press any button for return to menu)\n";
+
+                SetConsoleTextAttribute(hStdOut, 0);
+                system("pause");
             }
-            else if (activeMenuItem == 2)
+            else if (activeMenuItem == 2)   // Release
+            {
+                // Condotion
+                system("cls");
+
+                Stas();
+                cout << endl;
+
+
+                cout << "Lasted version 3.4\n\nAdding:\n Fix visual bug with mines, when u loss.\n Fix vibration in main menu\n Remove nousing functions and clear ram\n"
+                    << " Add that when u lose the game, game is restarting.\n ";
+
+                cout << "\n\n\n(Press any button for return to menu)\n";
+
+                SetConsoleTextAttribute(hStdOut, 0);
+                system("pause");
+            }
+            else if (activeMenuItem == 3)   // Save and exit
             {
                 beingDo = false;
 
-                // Saving to leader board
+                // add saving to leader board
+
+
+                system("exit");
             }
 
             break;
         default:
-            cout << "Code of button is " << (int)ch << "         ";
+            // Show button key
+            //cout << "Code of button is " << (int)ch << "         ";
             break;
         }
 
-
+        // Not overflow
         if (activeMenuItem < 0) activeMenuItem = 0;
-        if (activeMenuItem >= size(menu)) activeMenuItem = size(menu)-1;
+        if (activeMenuItem >= size(menu)) activeMenuItem = size(menu) - 1;
     }
+
+
+
+
 
     if (startGame == true)
     {
@@ -239,13 +433,15 @@ int main()
         SetConsoleTextAttribute(hStdOut, 7);    // Text to white
         //cout << "\033[253m";
 
-        //# Level
+        //# Choose Level
+        // cmd menu 2
         string menuLvl[] = { "1. Easy", "2. Norm", "3. Hard" };
 
-        bool lvlChosen = false;
-        short lvl;
         short activeItemLvl = 0;
-        ch = 0;
+        short lvl;
+        bool lvlChosen = false;
+
+        ch = 0;     // Set to 0 button catch
         x = 35;
         y = 8;
 
@@ -253,6 +449,8 @@ int main()
         while (beingDo1)
         {
             system("cls");
+
+            // Centering
             x = 35, y = 8;
             gotoxy(x, y);
 
@@ -270,29 +468,28 @@ int main()
 
             switch (ch)
             {
-                case ESC: beingDo1 = false;
-                case UP: activeItemLvl--; break;
-                case DOWN: activeItemLvl++; break;
+            case ESC: beingDo1 = false;
+            case UP: activeItemLvl--; break;
+            case DOWN: activeItemLvl++; break;
 
-                case ENTER:
-                    lvl = activeItemLvl;
+            case ENTER:
+                lvl = activeItemLvl;
 
-                    beingDo1 = false;
-                    system("cls");
-                    break;
+                beingDo1 = false;
+                system("cls");
+                break;
             }
 
+            // Not overflow
             if (activeItemLvl < 0) activeItemLvl = 0;
             if (activeItemLvl > size(menuLvl) - 1) activeItemLvl = size(menuLvl) - 1;
         }
-        
 
-        //printVector(map);
-        //printBeautyVector(map);
-
-        //# Game
-        // Set level random
-        short count;
+        // Point to run
+        startGamePoint:
+        //# Set random to Levels
+        // Set count of minew in each level - random
+        short count = 0;
         if (lvl == 0)
         {
             count = (rand() % 2) + 3;      // 3-5
@@ -324,40 +521,79 @@ int main()
             SetConsoleTitle(L"Saper lvl god");
         }
 
+
+        //# Start game
+
         int x = 3, y = 2;
         short activeMapItem = 0;
-        int ch = 0; // 25 (0-24)
+        int ch = 0;
 
-        bool win = false;
+        bool loss = false;
+
+        bool exit = 0;
+
         bool beingDo2 = true;
         while (beingDo2)
         {
+            // Condition
             system("cls");
             gotoxy(3, 2);
 
             // Debug
             //cout << "count: " << count;
 
+
             printBeautyVector(mapUser, activeMapItem);
+
+
             // Debug
             //cout << endl << endl;
             //printVector(map);
 
-            ch = _getch();
-            if (ch == 224) ch = _getch();
-
-            switch (ch)
+            if (loss == true)
             {
+                beingDo2 = false;
+
+                // Dondition
+                SetConsoleTextAttribute(hStdOut, FOREGROUND_RED);
+                gotoxy(2, 12);
+
+                // Print open view map
+                printVector(map);
+
+                cout << "\n\nYou lose !\n  Game over)\n\n\n";
+                SetConsoleTextAttribute(hStdOut, 7);
+
+                // Write new record if he bigger then old value
+                if (recordNew > record)
+                {
+                    record = recordNew;
+
+                    ofstream fout;
+                    fout.open("config.dll");
+
+                    fout << record;       // write
+                }
+            }
+            else
+            {
+                ch = _getch();
+                if (ch == 224) ch = _getch();
+
+                switch (ch)
+                {
                 case ESC: beingDo2 = false;
-                case UP: activeMapItem-=5; break;
-                case DOWN: activeMapItem+=5; break;
+                case UP: activeMapItem -= 5; break;
+                case DOWN: activeMapItem += 5; break;
                 case LEFT: activeMapItem--; break;
                 case RIGHT: activeMapItem++; break;
 
-                case ENTER: 
+                case ENTER:
                     // Logic
-                    checkCordinates(map, mapUser, activeMapItem);   // Dont return values ! I dnt know
-                    // Checking 
+                    // Checking
+                    //checkCordinates(map, mapUser, activeMapItem);   // Dont return values ! I dnt know
+
+                    // Checking INLINE
                     if (map[activeMapItem] == 0)
                     {
                         mapUser[activeMapItem] = 1;     // clear
@@ -365,40 +601,40 @@ int main()
                     }
                     else if (map[activeMapItem] == 1)
                     {
-                        mapUser[activeMapItem] == 2;    // mine
-                        win = true;
+                        mapUser[activeMapItem] = 2;    // mine
+                        loss = true;
                     }
+                }
 
-                    cout << endl << endl;
 
-                    if (win == true)
-                    {
-                        beingDo2 = false;
+                if (activeMapItem < 0) activeMapItem = 0;
+                if (activeMapItem >= size(map)) activeMapItem = size(map) - 1;
 
-                        SetConsoleTextAttribute(hStdOut, FOREGROUND_RED);
-                        gotoxy(2, 12);
-                        cout << "You lose !\n  Game over)\n\n\n";
-                        SetConsoleTextAttribute(hStdOut, 7);
 
-                        ofstream fout;
-                        fout.open("config.dll");
-                        if (recordNew > record) record = recordNew;
+               
+            }       // else (if loss true) 
 
-                        fout << record;       // write
-                    }
+            if (beingDo2 == false)
+            {
+                cout << "(Press any button to start again)" << endl;
+                SetConsoleTextAttribute(hStdOut, 0);
+                system("pause");
+
+                // After press any key
+                system("cls");
+
+                // Set to default
+                map = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };    // 25
+                mapUser = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+                recordNew = 0;
+
+                // Go to start new game
+                goto startGamePoint;
             }
-
-            if (activeMapItem < 0) activeMapItem = 0;
-            if (activeMapItem >= size(map)) activeMapItem = size(map) - 1;
-        }
-
-
-
-
-        system("pause");
-    }
+        }       // BeingDo
+    }       // startGame
     else cout << endl;
-    
+
     fsFile.close();
     return 0;
 }
